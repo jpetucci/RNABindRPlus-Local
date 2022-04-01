@@ -204,9 +204,9 @@ print "View the running log file (manually refresh that page for updates): ";
 print "<a href='/../RNABindRPlus/uploadData/LOGs/$jobID.txt'i target='_blank' rel='noopener noreferrer'>Main Log file</a>\n";
 
 print "When the job finishes, these main output files will be available:\n";
-print "<a href='/../RNABindRPlus/uploadData/finalpredictionsFor$jobID.text' target='_blank' rel='noopener noreferrer'>Final Predictions</a>\n";
-print "<a href='/../RNABindRPlus/uploadData/homologsFor$jobID.text' target='_blank' rel='noopener noreferrer'>Homologs</a>\n";
-print "<a href='/../RNABindRPlus/uploadData/statisticsFor$jobID.text' target='_blank' rel='noopener noreferrer'>Statistics</a>\n";
+print "<a href='/../RNABindRPlus/uploadData/$jobID/finalpredictionsFor$jobID.text' target='_blank' rel='noopener noreferrer'>Final Predictions</a>\n";
+print "<a href='/../RNABindRPlus/uploadData/$jobID/homologsFor$jobID.text' target='_blank' rel='noopener noreferrer'>Homologs</a>\n";
+print "<a href='/../RNABindRPlus/uploadData/$jobID/statisticsFor$jobID.text' target='_blank' rel='noopener noreferrer'>Statistics</a>\n";
 print "</pre>\n";
 
 # fork this process
