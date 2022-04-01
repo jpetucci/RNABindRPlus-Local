@@ -8,7 +8,7 @@ tar -xf rnabindrplus.tar.gz
 echo "Creating directories..."
 mkdir tomcat_work
 mkdir tomcat_logs
-mkdir rnabindrplus_output
+mkdir -p rnabindrplus_output/LOGs
 mkdir tomcat_conf_runtime
 
 echo "Done!"
