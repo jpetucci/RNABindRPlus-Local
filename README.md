@@ -10,10 +10,24 @@ This repo contains code to run a local instance of RNABindRPlus as described in 
 
 ## Installation
 Singularity is required (see https://sylabs.io/guides/latest/admin-guide/installation.html for installation instructions.) and a web browser (Firefox and Chrome tested)
-1. Download the Singularity container under the release menu
-2. Download the dependencies and data (~50 GB uncompressed) from here http://ailab-projects2.ist.psu.edu/RNABindRPlus/local_data/rnabindrplus.tar.gz or https://drive.google.com/drive/folders/1yyVYhvxUu7Xu5G-6GSF5Selvo4kUWHWK?usp=sharing . Note this archive contains an older version of blast and the nr database.
-3. untar files
-4. run directory setup script
+1. Create a new directory on the target machine
+```bash
+$ mkdir rnabindrplus-local_install
+$ cd ./rnabindrplus-local_install
+$ export RNABINDRPLUS_HOME=$PWD
+```
+2. Download the Singularity container under the release menu into $RNABINDRPLUS_HOME
+3. Download the dependencies and data (~50 GB uncompressed) from here http://ailab-projects2.ist.psu.edu/RNABindRPlus/local_data/rnabindrplus.tar.gz or https://drive.google.com/drive/folders/1yyVYhvxUu7Xu5G-6GSF5Selvo4kUWHWK?usp=sharing into $RNABINDRPLUS_HOME. Note this archive contains an older version of blast and the nr database.
+4. Run the setup script:
+```bash
+$ ./setup.sh
+```
 
 ## Usage
-NOTE: This README doc is still a work in process
+RNABindRPlus-Local utilizes a local tomcat webserver as the GUI front end
+1. In $RNABINDRPLUS_HOME start the server (leave the shell open with tomcat running)
+```bash
+$ ./start-server.sh
+```
+2. Open a web-browser and navigate to http://localhost:8080/RNABindRPlus
+3. From here, usage is the same as the public server. Upon job submission, a simple html site will be presented summarizing access to output and log files.
