@@ -17,4 +17,5 @@ mv /usr/local/tomcat/conf /usr/local/tomcat/conf_original-install
 cp -r /opt/tomcat_conf_runtime /usr/local/tomcat/conf
 chmod -R 0755 /usr/local/tomcat/conf
 chmod -R 0755 /opt/tomcat_conf_runtime
+chmod -R 0755 /usr/local/tomcat/webapps
 mkdir -m755 /opt/data 
