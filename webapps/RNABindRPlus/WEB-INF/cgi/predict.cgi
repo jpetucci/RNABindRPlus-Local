@@ -12,15 +12,14 @@ use CGI ":standard ";
 use CGI qw(:standard escapeHTML);
 use CGI::Carp "fatalsToBrowser";
 
-our $BaseailabDIR = "/opt/data";
-
-use lib "$BaseailabDIR/perl5";
+use lib "/opt/data/perl5";
 use lib "/usr/local/tomcat/webapps/RNABindRPlus/WEB-INF/cgi";
 use myfunc;
 #-
 our $SERVER_name = 'RNABindRPlus';
 our $serverDIR         = "/usr/local/tomcat/webapps/$SERVER_name";
 our $JavahomeDIR = "/opt/java/jre1.8.0_321/bin";
+our $BaseailabDIR = "/opt/data";
 
 #global variables
 #our $SERVER  = 'smtp.psu.edu';#'mailhub.iastate.edu';
