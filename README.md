@@ -16,7 +16,7 @@ $ git clone git@github.com:jpetucci/RNABindRPlus-Local.git
 $ cd ./RNABindRPlus-Local
 $ export RNABINDRPLUS_HOME=$PWD
 ```
-2. Download the Singularity container under the release menu assests (rnabindrplus-local.sif) into $RNABINDRPLUS_HOME
+2. Download the Singularity container under the release menu assets (rnabindrplus-local.sif) into $RNABINDRPLUS_HOME
 3. Download the dependencies and data (~50 GB uncompressed) from here http://ailab-projects2.ist.psu.edu/RNABindRPlus/local_data/rnabindrplus.tar.gz or https://drive.google.com/drive/folders/1yyVYhvxUu7Xu5G-6GSF5Selvo4kUWHWK?usp=sharing into $RNABINDRPLUS_HOME. Note this archive contains an older version of blast and the nr database.
 4. Run the setup script:
 ```bash
