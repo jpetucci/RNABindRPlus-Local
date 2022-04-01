@@ -10,10 +10,10 @@ This repo contains code to run a local instance of RNABindRPlus as described in 
 
 ## Installation
 Singularity is required (see https://sylabs.io/guides/latest/admin-guide/installation.html for installation instructions.) and a web browser (Firefox and Chrome tested)
-1. Create a new directory on the target machine
+1. Clone this repo and enter the top level directory
 ```bash
-$ mkdir rnabindrplus-local_install
-$ cd ./rnabindrplus-local_install
+$ git clone git@github.com:jpetucci/RNABindRPlus-Local.git
+$ cd ./RNABindRPlus-Local
 $ export RNABINDRPLUS_HOME=$PWD
 ```
 2. Download the Singularity container under the release menu into $RNABINDRPLUS_HOME
