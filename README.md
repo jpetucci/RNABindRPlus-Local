@@ -6,7 +6,7 @@
 * [Usage](#usage)
 
 ## General Info
-This repo contains code to run a local instance of RNABindRPlus as described in the publication "RNABindRPlus: A Predictor that Combines Machine Learning and Sequence Homology-Based Methods to Improve the Reliability of Predicted RNA-Binding Residues in Proteins"
+This repo contains code to run a local instance of RNABindRPlus as described in the publication "RNABindRPlus: A Predictor that Combines Machine Learning and Sequence Homology-Based Methods to Improve the Reliability of Predicted RNA-Binding Residues in Proteins", available here https://doi.org/10.1371/journal.pone.0097725
 
 ## Installation
 Singularity is required (see https://sylabs.io/guides/latest/admin-guide/installation.html for installation instructions.) and a web browser (Firefox and Chrome tested)
