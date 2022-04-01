@@ -1217,11 +1217,9 @@ sub genPSSM {
     my $r       = rand(1);
     my $tmpFL   = "$r.psiblast.out";
     my $PSSMdir = "$jobDIR/pssms";
-    my $psiblastout = "$jobDIR/psiblast";
     rmtree($PSSMdir) if ( -d $PSSMdir );
-    rmtree($psiblastout) if (-d $psiblastout);
     mkdir $PSSMdir || die("Cannot mkdir $PSSMdir:$!");
-    mkdir $psiblastout || die("Cannot mkdir $psiblastout:$!");
+
     my @qrywithPSSM;
 
     foreach my $qryID (@qrys4SVM) {
@@ -1231,13 +1229,13 @@ sub genPSSM {
 
         unlink $pssmFL if ( -e $pssmFL );
         print LOG
-"$psiblast -query $fastaFL -db $nrDB -out $psiblastout/$tmpFL -evalue $evalue  -outfmt 10 -num_iterations 3 -out_ascii_pssm $pssmFL\n";
+"$psiblast -query $fastaFL -db $nrDB -out $tmpFL -evalue $evalue  -outfmt 10 -num_iterations 3 -out_ascii_pssm $pssmFL\n";
 
         my $command =
-"$psiblast -query $fastaFL -db $nrDB -out $psiblastout/$tmpFL -evalue $evalue -outfmt 10 -num_iterations 3 -out_ascii_pssm $pssmFL";
+"$psiblast -query $fastaFL -db $nrDB -out $tmpFL -evalue $evalue -outfmt 10 -num_iterations 3 -out_ascii_pssm $pssmFL";
 
         system("$command") == 0 or die("FAILED: $command:$!");
-        unlink $psiblastout/$tmpFL;    #we do not need tmpFL.
+        unlink $tmpFL;    #we do not need tmpFL.
 
         if ( -e $pssmFL && -s $pssmFL ) {
             print LOG "$pssmFL generated. \n";
