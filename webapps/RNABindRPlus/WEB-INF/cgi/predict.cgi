@@ -206,7 +206,7 @@ print "<a href='/../RNABindRPlus/uploadData/LOGs/$jobID.txt'i target='_blank' re
 print "When the job finishes, these main output files will be available:\n";
 print "<a href='/../RNABindRPlus/uploadData/$jobID/finalpredictionsFor$jobID.txt' target='_blank' rel='noopener noreferrer'>Final Predictions</a>\n";
 print "<a href='/../RNABindRPlus/uploadData/$jobID/homologsFor$jobID.txt' target='_blank' rel='noopener noreferrer'>Homologs</a>\n";
-print "<a href='/../RNABindRPlus/uploadData/$jobID/statisticsFor$jobID.txt' target='_blank' rel='noopener noreferrer'>Statistics</a>\n";
+print "<a href='/../RNABindRPlus/uploadData/$jobID/statistics_$jobID.txt' target='_blank' rel='noopener noreferrer'>Statistics</a>\n";
 print "</pre>\n";
 
 # fork this process
