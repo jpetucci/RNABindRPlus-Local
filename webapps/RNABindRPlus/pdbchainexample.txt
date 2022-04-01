@@ -1,0 +1,4 @@
+# The format should be pdbid,chainid
+# Any comments should begin with '#'
+1a34,A
+1ec6,A

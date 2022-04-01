@@ -1,0 +1,20 @@
+BootStrap: docker
+From: tomcat:9.0
+
+%files
+./java /opt/java
+./tomcat_conf_runtime /opt/tomcat_conf_runtime
+../webapps/RNABindRPlus /usr/local/tomcat/webapps
+
+%post
+apt-get update
+apt-get -y install vim
+apt-get -y install libcgi-pm-perl
+apt-get -y install libswitch-perl
+
+tar -xf /opt/java/jre-8u321-linux-x64.tar.gz -C /opt/java/
+mv /usr/local/tomcat/conf /usr/local/tomcat/conf_original-install
+cp -r /opt/tomcat_conf_runtime /usr/local/tomcat/conf
+chmod -R 0755 /usr/local/tomcat/conf
+chmod -R 0755 /opt/tomcat_conf_runtime
+mkdir -m755 /opt/data 
